@@ -47,3 +47,63 @@ DELETE FROM waktu_kegiatan WHERE id_waktu_kegiatan = waktuId
 
 
 ALTER TABLE `waktu_kegiatan` ADD  FOREIGN KEY (`id_jenis_kegiatan`) REFERENCES `jenis_kegiatan`(`id_jenis_kegiatan`)
+
+
+-- Anggota
+
+CREATE PROCEDURE getAnggota(IN AnggotaId INT)
+SELECT * FROM anggota WHERE id_anggota = AnggotaId;
+
+CREATE PROCEDURE getAllAnggota()
+SELECT * FROM anggota
+
+CREATE PROCEDURE delAnggota(IN AnggotaId INT)
+DELETE FROM anggota WHERE id_anggota = AnggotaId 
+
+
+
+-- Jabatan
+
+CREATE PROCEDURE getjabatan(IN jabatanId INT)
+SELECT * FROM jabatan WHERE id_jabatan = jabatanId;
+
+CREATE PROCEDURE getAlljabatan()
+SELECT * FROM jabatan
+
+CREATE PROCEDURE deljabatan(IN jabatanId INT)
+DELETE FROM jabatan WHERE id_jabatan = jabatanId 
+
+
+-- Detail Pindah
+
+CREATE PROCEDURE getdetail_pindah(IN detail_pindahId INT)
+SELECT * FROM detail_pindah WHERE _id_det_red_pindah = detail_pindahId;
+
+CREATE PROCEDURE getAlldetail_pindah()
+SELECT * FROM detail_pindah
+
+CREATE PROCEDURE deldetail_pindah(IN detail_pindahId INT)
+DELETE FROM detail_pindah WHERE id_det_red_pindah= detail_pindahId 
+
+
+-- Detail Head Pindah
+
+CREATE PROCEDURE gethead_pindah(IN head_pindahId INT)
+SELECT * FROM head_pindah WHERE id_head_red_pindah = head_pindahId;
+
+CREATE PROCEDURE getAllhead_pindah()
+SELECT * FROM head_pindah
+
+CREATE PROCEDURE delhead_pindah(IN head_pindahId INT)
+DELETE FROM head_pindah WHERE id_head_red_pindah= head_pindahId 
+
+-- Detail Registrasi
+
+CREATE PROCEDURE getregistrasi(IN registrasiId INT)
+SELECT * FROM registrasi WHERE id_registrasi = registrasiId;
+
+CREATE PROCEDURE getAllregistrasi()
+SELECT * FROM registrasi
+
+CREATE PROCEDURE delregistrasi(INregistrasiId INT)
+DELETE FROM registrasi WHERE id_registrasi= registrasiId 
